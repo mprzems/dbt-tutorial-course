@@ -5,7 +5,35 @@ models:
     description: "List of items in this order"
     columns:
       - name: order_item_id
+        description: "ID of item in this order"
+        tests:
+          - not_null
+
       - name: order_id
+        description: "ID order"
+        tests:
+          - not_null
+          - relationships:
+              field: order_id
+              to: ref('src_ecommerce__orders')
+
       - name: user_id
+        description: "ID user"
+        tests:
+          - not_null
+          - relationships:
+              field: user_id
+              to: ref('stg_ecommerce__users')
+
       - name: product_id
+        description: "ID of product"
+        tests:
+          - not_null
+          - relationships:
+              field: product_id
+              to: ref('stg_ecommerce__products')
+
       - name: item_sale_price
+        description: "How much the item sold for"
+        tests:
+          - not_null
