@@ -5,7 +5,30 @@ models:
     description: "List of products"
     columns:
       - name: product_id
-      - name: cost 
+        description: "ID of products"
+        tests:
+          - not_null
+          - unique
+
+      - name: cost
+        description: "Cost of products"
+        tests:
+          - not_null
+
       - name: brand
+        description: "Brand of products"
+
       - name: retail_price
+        description: "Retail price of products"
+        tests:
+          - not_null
+
       - name: department
+        description: "Department of product is either Menswear or Womenswear"
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - "Men"
+                - "Women"
+              quote: true
