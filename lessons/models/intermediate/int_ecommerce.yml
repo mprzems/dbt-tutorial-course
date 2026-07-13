@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: int_ecommerce__order_items_products
+    description: "Order items with products"
+    columns:
+      - name: order_item_id
+        description: "Order item ID"
+        tests:
+          - not_null:
+              severity: error
+          - unique:
+              severity: error
+
+      - name: order_id
+        description: "ID Order"
+        tests:
+          - not_null
+#
+#     - &user_id
+#
+      - name: user_id
+        description: "ID User"
+        tests:
+          - not_null
+
+      - name: product_id
+        description: "ID Product"
+        tests:
+          - not_null
+
+      - name: item_sale_price
+        description: "Item sale price"
+        tests:
+          - not_null
+
+      - name: product_department
+        description: "Product department either Men or Women"
+        tests:
+          - not_null
+
+      - name: product_cost
+        description: "Cost of the product"
+        tests:
+          - not_null
+
+      - name: product_retail_price
+        description: "Product retail price"
+        tests:
+          - not_null
