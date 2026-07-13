@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_ecommerce__users
+    description: "List of users"
+    columns:
+      - name: user_id
+        description: "ID of user"
+        tests:
+          - not_null
+          - unique
+
+      - name: first_name
+        description: "User first name"
+
+      - name: last_name
+        description: "User last name"
+
+      - name: age
+        description: "User age"
+        tests:
+          - not_null
+
+      - name: city
+        description: "User city"
+
+      - name: country
+        description: "User country"
+
+      - name: created_at
+        description: "Date when folder was created"

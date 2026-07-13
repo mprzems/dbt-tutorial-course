@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_ecommerce__products
+    description: "List of products"
+    columns:
+      - name: product_id
+      - name: cost 
+      - name: brand
+      - name: retail_price
+      - name: department

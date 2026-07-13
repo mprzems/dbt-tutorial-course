@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_ecommerce__order_items
+    description: "List of items in this order"
+    columns:
+      - name: order_item_id
+      - name: order_id
+      - name: user_id
+      - name: product_id
+      - name: item_sale_price

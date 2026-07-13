@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_ecommerce__events
+    description: "Events from users"
+    columns:
+      - name: event_id
+      - name: user_id
+      - name: sequence_number
+      - name: created_at
+      - name: uri
